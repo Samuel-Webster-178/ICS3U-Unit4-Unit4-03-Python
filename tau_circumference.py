@@ -6,20 +6,23 @@
 #     with inputted radius
 
 
-import constants
-
-
 def main():
     # I calculate circumference
 
     # input
-    radius = int(input("Enter radius of the circle in mm: "))
+    str_repeat_number = input("Enter how many times to repeat: ")
+    print("")
 
     # process
-    circumference = constants.TAU * radius
+    try:
+        int_repeat_number = int(str_repeat_number)
+        for counter1 in range(int_repeat_number + 1):
+            product = counter1**2
+            print("{0}² = {1}".format(counter1, product))
+    except Exception:
+        print("Invalid Input")
 
     # output
-    print("Circumference is {} mm.".format(circumference))
     print("\nDone.")
 
 
